@@ -1,0 +1,29 @@
+<h3>Enums</h3>
+
+An <code>enum</code> is a map of numeric values and string counter parts
+
+<div class="flex">
+    <pre class="col"><code class="hljs lang-typescript" data-trim>
+// TypeScript
+
+enum MessageKind {Start, Run, Stop};
+
+const message = MessageKind.Start;</code></pre>
+    <pre class="col"><code class="hljs lang-javascript" data-trim>
+
+// JavaScript
+
+var MessageKind;
+(function (MessageKind) {
+    MessageKind[MessageKind["Start"] = 0] = "Start";
+    MessageKind[MessageKind["Run"] = 1] = "Run";
+    MessageKind[MessageKind["Stop"] = 2] = "Stop";
+})(MessageKind || (MessageKind = {}));
+;
+var message = MessageKind.Start;</code></pre>
+</div>
+
+<p class="fragment">Can you explain the JavaScript to me?</p>
+<pre class="fragment"><code class="hljs lang-javascript" data-trim>
+MessageKind['Start']; // => 0
+MessageKind[0]; // => 'Start'</code></pre>
